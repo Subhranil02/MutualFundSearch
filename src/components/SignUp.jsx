@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignUp = (props) => {
   const [credentials, setCredentials] = useState({
@@ -13,13 +14,16 @@ const SignUp = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credentials;
-    const response = await fetch(`https://mutualfundsearch-backend.onrender.com/api/auth/createuser`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, password }),
-    });
+    const response = await fetch(
+      `https://mutualfundsearch-backend.onrender.com/api/auth/createuser`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -89,6 +93,12 @@ const SignUp = (props) => {
         <button type="submit" className="btn btn-primary">
           Sign in
         </button>
+        <div className="text-center mt-3">
+          <span>Already have an account? </span>
+          <Link to="/login" className="text-decoration-underline text-primary">
+            Login
+          </Link>
+        </div>
       </form>
     </div>
   );
