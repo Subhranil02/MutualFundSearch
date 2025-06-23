@@ -45,7 +45,7 @@ function App() {
             path="/savedfund"
             element={
               <PrivateRoute>
-                <SavedFundPage showAlert={showAlert} />
+                <SavedFund showAlert={showAlert} />
               </PrivateRoute>
             }
           />
