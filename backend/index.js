@@ -16,6 +16,8 @@ app.use('/api/funds', fundRoutes);
 
 app.use('/api/auth', require('./routes/auth'))
 
-app.listen(port, ()=> {
-    console.log(`Assignment1 Backend listening at http://localhost:${port}`);
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`✅ Assignment1 Backend listening on port ${PORT}`);
+});
