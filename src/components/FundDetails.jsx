@@ -15,7 +15,7 @@ const FundDetails = (props) => {
 
   try {
     const res = await axios.post(
-      'http://localhost:5000/api/funds/save',
+      'https://mutualfundsearch-backend.onrender.com/api/funds/save',
       {
         schemeCode: id,
         schemeName: fundData.meta.scheme_name,

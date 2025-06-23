@@ -8,7 +8,7 @@ const SavedFundPage = (props) => {
   const fetchSavedFunds = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await axios.get("http://localhost:5000/api/funds/saved", {
+      const res = await axios.get("https://mutualfundsearch-backend.onrender.com/api/funds/saved", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -24,7 +24,7 @@ const SavedFundPage = (props) => {
   const handleDelete = async (schemeCode) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/funds/${schemeCode}`, {
+      await axios.delete(`https://mutualfundsearch-backend.onrender.com/api/funds/${schemeCode}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
