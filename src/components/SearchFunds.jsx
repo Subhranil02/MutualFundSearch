@@ -104,7 +104,7 @@ const SearchFunds = () => {
                 <div className="card-body">
                   <h5 className="card-title">{fund.schemeName}</h5>
                   <p className="card-text">Scheme Code: {fund.schemeCode}</p>
-                  <Link to={`/mf/${schemeCode}`} className="btn btn-primary">
+                  <Link to={`/mf/${fund.schemeCode}`} className="btn btn-primary">
                     View Details
                   </Link>
                 </div>
