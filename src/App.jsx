@@ -1,13 +1,11 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
 import SavedFund from "./components/SavedFund";
 import Alert from "./components/Alert";
 import { Router, Route, Routes } from "react-router-dom";
 import SearchFunds from "./components/SearchFunds";
 import FundDetails from "./components/FundDetails";
 import PrivateRoute from "./components/PrivateRoute";
-import PropTypes from "prop-types";
 // import NoteState from "./context/notes/NoteState";
 import LoadingBar from "react-top-loading-bar";
 import Login from "./components/Login";
