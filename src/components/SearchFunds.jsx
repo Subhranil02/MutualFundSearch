@@ -104,7 +104,7 @@ const SearchFunds = () => {
                   <h5 className="card-title">{fund.schemeName}</h5>
                   <p className="card-text">Scheme Code: {fund.schemeCode}</p>
                   <a
-                    href={`https://api.mfapi.in/mf/${fund.schemeCode}`}
+                    href={`/mf/${fund.schemeCode}`}
                     className="btn btn-primary"
                   >
                     View Details
