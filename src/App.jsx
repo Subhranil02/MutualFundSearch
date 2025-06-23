@@ -36,7 +36,7 @@ function App() {
             path="/mf/:id"
             element={
               <PrivateRoute>
-                <FundDetails showAlert={showAlert}/>
+                <FundDetails showAlert={showAlert} />
               </PrivateRoute>
             }
           />
@@ -45,10 +45,11 @@ function App() {
             path="/savedfund"
             element={
               <PrivateRoute>
-                <SavedFund showAlert={showAlert} />
+                <SavedFundPage showAlert={showAlert} />
               </PrivateRoute>
             }
           />
+
           <Route path="/login" element={<Login showAlert={showAlert} />} />
           <Route path="/signup" element={<SignUp showAlert={showAlert} />} />
         </Routes>
