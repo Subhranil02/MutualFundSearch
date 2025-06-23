@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const SearchFunds = () => {
@@ -103,12 +104,9 @@ const SearchFunds = () => {
                 <div className="card-body">
                   <h5 className="card-title">{fund.schemeName}</h5>
                   <p className="card-text">Scheme Code: {fund.schemeCode}</p>
-                  <a
-                    href={`/mf/${fund.schemeCode}`}
-                    className="btn btn-primary"
-                  >
+                  <Link to={`/mf/${schemeCode}`} className="btn btn-primary">
                     View Details
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))
